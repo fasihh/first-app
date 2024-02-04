@@ -1,16 +1,16 @@
 const PostList = ({ posts, title }) => {
     return (
         <div className="post-list">
-            <h2>{ posts.length > 0 ? title : "no posts here" }</h2>
+            <h2>{ title }</h2>
             {posts.map(post => {
                 const date = new Date(post.timestamps.createdAt);
                 return (
-                    <div className="post-preview" key={post.id}>
+                    <div className="post-preview" key={post._id}>
                         <div className="post-content">
                             <h2>{ post.title }</h2>
                             <p>by { post.creator }</p>
                         </div>
-                        <p className="timestamp">{ `${date.getDate()}-${date.getMonth()}-${date.getFullYear()}, ${date.getHours()}:${date.getMinutes()}` }</p>
+                        <p className="timestamp">{ `${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}, ${date.getHours()}:${date.getMinutes()}` }</p>
                     </div>
                 );
             })}
