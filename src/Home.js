@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import PostList from './PostList';
 
 const Home = () => {
     const [posts, setPosts] = useState([
@@ -36,17 +37,7 @@ const Home = () => {
 
     return (
         <div className="home">
-            {posts.map(post => {
-                const date = new Date(post.timestamps.createdAt);
-                console.log(date);
-                return (<div className="post-preview" key={post.id}>
-                    <div className="post-content">
-                        <h2>{ post.title }</h2>
-                        <p>by { post.creator }</p>
-                    </div>
-                    <p className="timestamp">{ `${date.getDate()}-${date.getMonth()}-${date.getFullYear()}, ${date.getHours()}:${date.getMinutes()}` }</p>
-                </div>);
-            })}
+            <PostList posts={ posts } title="all posts >>"/>
         </div>
     );
 }
