@@ -4,7 +4,6 @@ import useFetch from './useFetch';
 
 const Home = () => {
     const { data, isLoading, failedLoading, error } = useFetch("http://localhost:3001/posts");
-    console.log(localStorage.getItem('token'));
 
     return (
         <div className="home">
