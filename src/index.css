@@ -17,7 +17,7 @@ html {
   background-color: #222225;
 }
 
-.content {
+.app {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,18 +62,16 @@ html {
 }
 
 .navbar .signin {
-  padding: 3px 6px;
-  background: #222225;
-  background: linear-gradient(to right, #222225 50%, #61c1fb 50%) left;
+  padding: 3px 8px;
+  background: linear-gradient(to right, #222225 50%, #61c1fb 50%) 0;
   background-size: 200%;
   border-bottom: 1px solid #61c1fb;
   border-right: 1px solid #61c1fb;
-  transition: 0.2s ease-out;
 }
 
 .navbar .signin:hover {
   color: #222225;
-  background-position: right;
+  background-position: 99%;
 }
 
 .home .error-message {
@@ -85,7 +83,7 @@ html {
   margin: 50px;
 }
 
-.home .post-list .post-preview {
+.home .post-list .post-preview > a {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,9 +91,10 @@ html {
   padding: 30px;
   border-bottom: 1px solid #2e2e32;
   transition-duration: 0.2s;
+  text-decoration: none;
 }
 
-.home .post-list .post-preview:hover {
+.home .post-list .post-preview > a:hover {
   border-bottom: 1px solid #61c1fb;
   border-right: 1px solid #61c1fb;
   background-color: #2e2e32;
@@ -154,4 +153,116 @@ html {
 
 .bouncing-dots > div:nth-child(3) {
   animation-delay: 0.2s; 
+}
+
+.post-details {
+  padding-bottom: 120px;
+  margin-top: 80px;
+  width: 1200px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  box-shadow: 2px 2px 5px #1b1b1d;
+  border-right: 1px solid #61c1fb;
+  border-bottom: 1px solid #61c1fb;
+  background-color: #2e2e32;
+}
+
+.post .post-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 30px;
+}
+
+.post .post-header h2 {
+  font-size: 30px;
+}
+
+.post .post-content {
+  padding: 30px;
+  font-size: 18px;
+}
+
+.post .post-header .timestamp {
+  color: #434349
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 150px;
+  padding: 20px 40px 40px 40px;
+  border-radius: 2px;
+  border-right: 1px solid #61c1fb;
+  border-bottom: 1px solid #61c1fb;
+  border-top: 10px solid #2e2e32;
+  border-left: 10px solid #2e2e32;
+  background: #2e2e32;
+
+  box-shadow: 3px 3px 6px #1b1b1d;
+}
+
+.signin-form h2 {
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+.signin-form div {
+  color: lightcoral;
+  align-self: center;
+}
+
+.signin-form form {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signin-form .form-input {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.signin-form .form-input label {
+  display: flex;
+  margin-left: 5px;
+}
+
+.signin-form .form-input input {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+  width: 250px;
+  height: 30px;
+  background: #434349;
+  box-shadow: 2px 2px 3px #222225;
+}
+
+.signin-form button {
+  align-self: center;
+  font-size: 16px;
+  width: 250px;
+  margin-top: 20px;
+  border: none;
+  padding: 3px 8px;
+  background: #2e2e32;
+  background: linear-gradient(to right, #2e2e32 50%, #61c1fb 50%) 0;
+  background-size: 200%;
+  border-bottom: 1px solid #61c1fb;
+  border-right: 1px solid #61c1fb;
+  transition-duration: 0.2s;
+  box-shadow: 2px 2px 3px #222225;
+}
+
+.signin-form button:hover {
+  color: #2e2e32;
+  background-position: 100%;
 }

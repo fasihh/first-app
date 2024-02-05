@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const PostList = ({ posts, title }) => {
     return (
         <div className="post-list">
@@ -6,11 +8,13 @@ const PostList = ({ posts, title }) => {
                 const date = new Date(post.timestamps.createdAt);
                 return (
                     <div className="post-preview" key={post._id}>
-                        <div className="post-content">
-                            <h2>{ post.title }</h2>
-                            <p>by { post.creator }</p>
-                        </div>
-                        <p className="timestamp">{ `${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}, ${date.getHours()}:${date.getMinutes()}` }</p>
+                        <Link to={`/posts/${post._id}`}> 
+                            <div className="post-content">
+                                <h2>{ post.title }</h2>
+                                <p>by { post.creator }</p>
+                            </div>
+                            <p className="timestamp">{ `${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}, ${date.getHours()}:${date.getMinutes()}` }</p>   
+                        </Link>
                     </div>
                 );
             })}
