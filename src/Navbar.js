@@ -5,7 +5,10 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <h1><Link to="/">posts</Link></h1>
+            <div className="logo">
+                <h1><Link to="/">post</Link></h1>
+                { token && <div>as { localStorage.getItem('email') }</div> }
+            </div>
             <div className="links">
                 { token && <a href="/" onClick={ () => { localStorage.setItem('token', '') } } className="signin">log out</a> }
                 { !token ? <Link className="signin" to="/signin">sign in</Link> : <Link to="/create" className="create">create post</Link>}

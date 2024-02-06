@@ -33,12 +33,24 @@ html {
   justify-content: space-between;
 }
 
-.navbar h1 a {
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+}
+
+.navbar .logo div {
+  color: #4d4d54;
+  margin-left: 10px;
+  align-self: last baseline;
+}
+
+.navbar .logo h1 a {
   color: #61c1fb;
   transition: 0.2s;
 }
 
-.navbar h1 a:hover {
+.navbar .logo h1 a:hover {
   color: #77cafd;
   transition: 0.2s;
 }

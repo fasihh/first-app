@@ -11,7 +11,6 @@ const PostDetails = () => {
         <div className="post-details">
             { failedLoading && <p className="error-message">{ error }</p> }
             { isLoading && <DotsLoader /> }
-            { !isLoading && !data && <p className="error-message">can't find post :c</p>}
             { data && <Post post={ data }/> }
         </div>
     );

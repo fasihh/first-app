@@ -9,7 +9,6 @@ const Home = () => {
         <div className="home">
             { failedLoading && <p className="error-message">{ error }</p> }
             { isLoading && <DotsLoader /> }
-            { !isLoading && !data && <p className="error-message">no posts :c</p>}
             { data && <PostList posts={ data.posts } title={ `all (${data.posts.length}) posts >>` }/> }
         </div>
     );
