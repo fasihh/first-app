@@ -93,8 +93,12 @@ html {
   margin-top: 100px;
 }
 
+.home .post-list {
+  margin-bottom: 97px;
+}
+
 .home .post-list > h2 {
-  margin: 50px;
+  margin: 50px 0 20px 50px;
 }
 
 .home .post-list .post-preview > a {
@@ -193,11 +197,38 @@ html {
 
 .post .post-header h2 {
   font-size: 30px;
+  word-wrap: break-all;
 }
 
 .post .post-content {
+  white-space: pre-wrap;
   padding: 30px;
   font-size: 18px;
+}
+
+.post .post-header .time-and-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.post .post-header .time-and-options button {
+  align-self: flex-end;
+  width: 100px;
+  background: none;
+  border: none;
+  margin-top: 10px;
+  padding: 3px 8px;
+  background: linear-gradient(to right, #2e2e32 50%, #61c1fb 50%) 0;
+  background-size: 200%;
+  border-bottom: 1px solid #61c1fb;
+  border-right: 1px solid #61c1fb;
+  transition-duration: 0.2s;
+}
+
+.post .post-header .time-and-options button:hover {
+  color: #2e2e32;
+  background-position: 100%;
+  transition-duration: 0.2s;
 }
 
 .post .post-header .timestamp {
@@ -209,7 +240,7 @@ html {
   flex-direction: column;
 
   margin-top: 150px;
-  padding: 20px 60px 70px 60px;
+  padding: 20px 60px 40px 60px;
   border-radius: 2px;
   border-right: 1px solid #61c1fb;
   border-bottom: 1px solid #61c1fb;
@@ -278,11 +309,15 @@ html {
   background-position: 100%;
 }
 
+.signin-form .sign-up {
+  margin-top: 30px;
+}
+
 .create-post {
   display: flex;
   flex-direction: column;
 
-  margin: 50px 0 30px 0;
+  margin: 80px 0;
   width: var(--nav-width);
   padding: 20px 40px 40px 40px;
   border-radius: 2px;
@@ -331,11 +366,13 @@ html {
   height: 350px;
   background: #434349;
   box-shadow: 2px 2px 3px #222225;
+  resize: none;
 }
 
 .create-post button {
   align-self: center;
   font-size: 16px;
+  height: 50px;
   width: 500px;
   margin-top: 20px;
   border: none;

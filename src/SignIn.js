@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
     const [email, setEmail] = useState("");
@@ -10,7 +11,6 @@ const SignIn = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const user = { email, password };
-        console.log(user);
 
         fetch('http://localhost:3001/user/login',
         {
@@ -29,7 +29,6 @@ const SignIn = () => {
         .then(data => {
             localStorage.setItem('token', data.token.split(' ')[1]);
             localStorage.setItem('email', user.email);
-            localStorage.setItem('password', user.password);
             history.push('/');
             window.location.reload();
         })
@@ -41,7 +40,7 @@ const SignIn = () => {
     return ( 
         <div className="signin-form">
             <h2>sign in</h2>
-            { failed && <div>Incorrect username or password</div> }
+            { failed && <div className="error-message">Incorrect username or password</div> }
             <form>
                 <div className="form-input">
                     <label>email { failed && email.length === 0 && <div className="error-message">* missing field</div> }</label>
@@ -64,6 +63,8 @@ const SignIn = () => {
                 </div>
             </form>
             <button onClick={ handleSubmit }>sign in</button>
+
+            <p className="sign-up">don't have an account? <Link to='signup'>sign up!</Link></p>
         </div> 
     );
 }

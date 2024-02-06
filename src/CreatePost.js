@@ -11,7 +11,6 @@ const CreatePost = () => {
     const handleCreate = (e) => {
         e.preventDefault();
         const post = { title, content };
-        console.log(localStorage.getItem('token'));
 
         fetch('http://localhost:3001/posts', {
             method: 'POST',
