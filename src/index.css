@@ -11,6 +11,7 @@
   margin: 0;
   font-family: 'Space Mono', monospace;
   color: #e6e7eb;
+  outline: none;
 }
 
 html {
@@ -188,6 +189,10 @@ html {
   background-color: #2e2e32;
 }
 
+.post-container {
+  border-bottom: 3px dashed #434349;
+}
+
 .post .post-header {
   display: flex;
   justify-content: space-between;
@@ -204,6 +209,7 @@ html {
   white-space: pre-wrap;
   padding: 30px;
   font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .post .post-header .time-and-options {
@@ -213,6 +219,7 @@ html {
 
 .post .post-header .time-and-options button {
   align-self: flex-end;
+  font-size: 16px;
   width: 100px;
   background: none;
   border: none;
@@ -233,6 +240,80 @@ html {
 
 .post .post-header .timestamp {
   color: #434349
+}
+
+.comments {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.comments-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  height: 100px;
+}
+
+.no-comments-message {
+  color: #757473;
+  font-size: 18px;
+}
+
+.create-comment {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.create-comment form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-comment form p {
+  color: lightcoral;
+  margin: 5px 0 5px 20px;
+}
+
+.create-comment form input {
+  margin-top: 20px;
+  font-size: 16px;
+  width: 100%;
+  background: none;
+  padding: 12px;
+  border: none;
+  border-bottom: 1px solid #434349;
+}
+
+.create-comment button {
+  margin-left: 30px;
+  background: none;
+  align-self: last baseline;
+}
+
+.create-comment button {
+  align-self: center;
+  font-size: 16px;
+  width: 100px;
+  margin-top: 20px;
+  border: none;
+  padding: 3px 8px;
+  background: #2e2e32;
+  background: linear-gradient(to right, #2e2e32 50%, #61c1fb 50%) 0;
+  background-size: 200%;
+  border-bottom: 1px solid #61c1fb;
+  border-right: 1px solid #61c1fb;
+  transition-duration: 0.2s;
+  box-shadow: 2px 2px 3px #222225;
+}
+
+.create-comment button:hover {
+  color: #2e2e32;
+  background-position: 100%;
 }
 
 .signin-form {
