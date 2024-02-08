@@ -316,6 +316,68 @@ html {
   background-position: 100%;
 }
 
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 35px 0 15px 0;
+}
+
+.user {
+  display: flex;
+}
+
+.user img {
+  margin-right: 20px;
+}
+
+.comment {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 2px solid #3c3c42;
+}
+
+.comment .comment-creator {
+  font-size: 19px;
+}
+
+.comment .comment-message {
+  font-size: 18px;
+  margin: 10px 0 10px 5px;
+}
+
+.comment .comment-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment .comment-details .comment-timestamps {
+  color: #434349;
+}
+
+.comment .comment-details button {
+  align-self: flex-end;
+  font-size: 16px;
+  width: 100px;
+  margin-top: 15px;
+  border: none;
+  padding: 3px 8px;
+  background: #2e2e32;
+  background: linear-gradient(to right, #2e2e32 50%, #61c1fb 50%) 0;
+  background-size: 200%;
+  border-bottom: 1px solid #61c1fb;
+  border-right: 1px solid #61c1fb;
+  transition-duration: 0.2s;
+  box-shadow: 2px 2px 3px #222225;
+}
+
+.comment .comment-details button:hover {
+  color: #2e2e32;
+  background-position: 100%;
+}
+
 .signin-form {
   display: flex;
   flex-direction: column;
