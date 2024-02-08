@@ -329,6 +329,8 @@ html {
 
 .user img {
   margin-right: 20px;
+  width: 70px;
+  height: 70px;
 }
 
 .comment {
