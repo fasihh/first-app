@@ -30,7 +30,6 @@ const SignIn = () => {
             localStorage.setItem('token', data.token.split(' ')[1]);
             localStorage.setItem('email', user.email);
             history.push('/');
-            window.location.reload();
         })
         .catch(err => {
             setFailed(true);
