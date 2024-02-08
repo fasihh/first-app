@@ -50,6 +50,7 @@ const Post = ({ post }) => {
                 </div>
             </div>
             <div className="comments">
+                <h3>comments { post.comments.length }</h3>
                 <CreateComment postId={ post._id } />
                 <div className="comments-container">
                     { !post.comments.length ? <div className="no-comments-message">no comments yet... be the first one to comment! :D</div> : post.comments.map(comment => {
