@@ -439,6 +439,7 @@ html {
 
 .signin-form .form-input {
   display: flex;
+  width: 253px;
   flex-direction: column;
   margin: 10px 0;
 }
@@ -446,6 +447,12 @@ html {
 .signin-form .form-input label {
   display: flex;
   margin-left: 5px;
+}
+
+.signin-form .form-input label .error-message {
+  width: 200px;
+  font-size: 13px;
+  word-break: break-all;
 }
 
 .signin-form .form-input input {
@@ -481,7 +488,9 @@ html {
 }
 
 .signin-form .sign-up {
+  text-align: center;
   margin-top: 30px;
+  font-size: 15px;
 }
 
 .create-post {
