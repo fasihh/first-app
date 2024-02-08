@@ -5,6 +5,7 @@ import SignIn from './SignIn';
 import PostDetails from './PostDetails';
 import CreatePost from './CreatePost';
 import NotFound from './NotFound';
+import EditHandler from './EditHandler';
 
 function App() {
   const HandleCreate = () => {
@@ -27,6 +28,10 @@ function App() {
             <Route exact path="/posts/:postId">
               <Navbar />
               <PostDetails />
+            </Route>
+            <Route exact path="/posts/:postId/edit">
+              <Navbar />
+              <EditHandler />
             </Route>
             <Route exact path="/create">
               <Navbar />

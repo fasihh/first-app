@@ -3,6 +3,7 @@ import setNull from "./setNull";
 import Comment from "./Comment";
 import CreateComment from "./CreateComment";
 import getDate from "./getDate";
+import { Link } from "react-router-dom";
 
 const Post = ({ post }) => {
     const history = useHistory();
@@ -32,6 +33,8 @@ const Post = ({ post }) => {
         })
     }
 
+    const isUpdated = getDate(post.timestamps.createdAt) !== getDate(post.timestamps.updatedAt);
+    console.log(getDate(post.timestamps.createdAt), getDate(post.timestamps.updatedAt));
     return ( 
         <article className="post">
             <div className="post-container">
@@ -41,8 +44,11 @@ const Post = ({ post }) => {
                         <p>by { post.creator.length > 50 ? `${post.creator.slice(0, 50)}...` : post.creator }</p>
                     </div>
                     <div className="time-and-options">
-                        <p className="timestamp">{ getDate(post.timestamps.createdAt) }</p>
-                        { post.creator === localStorage.getItem('email') && <button className="signin" onClick={ handleDelete }>delete</button>}
+                        <p className="timestamp">{ isUpdated ? "edited -" : "" } { isUpdated ? getDate(post.timestamps.updatedAt) : getDate(post.timestamps.createdAt) }</p>
+                        <div className="options">
+                            { post.creator === localStorage.getItem('email') && <button className="options-button" onClick={ handleDelete }>delete</button>}
+                            { post.creator === localStorage.getItem('email') && <Link to={`/posts/${post._id}/edit`} className="options-button">edit</Link>}
+                        </div>
                     </div>
                 </div>
                 <div className="post-content">

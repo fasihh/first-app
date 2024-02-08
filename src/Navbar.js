@@ -8,7 +8,7 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="logo">
                 <h1><Link to="/">post</Link></h1>
-                { token && <div>as { localStorage.getItem('email') }</div> }
+                { token && <div>{ localStorage.getItem('email') }</div> }
             </div>
             <div className="links">
                 { token && <a href="/" onClick={ setNull } className="signin">log out</a> }
