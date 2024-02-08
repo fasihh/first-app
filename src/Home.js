@@ -3,7 +3,7 @@ import DotsLoader from './DotsLoader';
 import useFetch from './useFetch';
 
 const Home = () => {
-    const { data, isLoading, failedLoading, error } = useFetch("http://localhost:3001/posts");
+    const { data, isLoading, failedLoading, error } = useFetch(`${process.env.REACT_APP_API_URL}/posts`);
 
     return (
         <div className="home">

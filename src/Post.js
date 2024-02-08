@@ -11,7 +11,7 @@ const Post = ({ post }) => {
     const handleDelete = () => {
         if (!window.confirm('are you sure you want delete this post?')) return;
 
-        fetch(`http://localhost:3001/posts/${post._id}`,{
+        fetch(`${process.env.REACT_APP_API_URL}/posts/${post._id}`,{
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',

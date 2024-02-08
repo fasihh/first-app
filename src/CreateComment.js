@@ -10,7 +10,7 @@ const CreateComment = ({ postId }) => {
     const handleCreate = (e) => {
         e.preventDefault();
 
-        fetch(`http://localhost:3001/posts/${postId}/comments`, {
+        fetch(`${process.env.REACT_APP_API_URL}/posts/${postId}/comments`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

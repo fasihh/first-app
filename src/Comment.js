@@ -9,7 +9,7 @@ const Comment = ({ comment }) => {
     const handleDelete = () => {
         if (!window.confirm('are you sure you want to delete this comment?')) return;
 
-        fetch(`http://localhost:3001/posts/${comment.postId}/comments/${comment._id}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/posts/${comment.postId}/comments/${comment._id}`, {
             method: 'DELETE',
             headers: {
                 'Accept': 'application/json',

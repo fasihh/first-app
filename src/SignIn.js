@@ -12,7 +12,7 @@ const SignIn = () => {
         e.preventDefault();
         const user = { email, password };
 
-        fetch('http://localhost:3001/user/login',
+        fetch(`${process.env.REACT_APP_API_URL}/user/login`,
         {
             headers: {
                 'Accept': 'application/json',

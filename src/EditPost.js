@@ -11,7 +11,7 @@ const EditPost = ({ post }) => {
     const handleEdit = (e) => {
         e.preventDefault();
 
-        fetch(`http://localhost:3001/posts/${post._id}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/posts/${post._id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
