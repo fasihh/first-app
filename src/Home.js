@@ -9,7 +9,7 @@ const Home = () => {
         <div className="home">
             { failedLoading && <p className="error-message">{ error }</p> }
             { isLoading && <DotsLoader /> }
-            { data && <PostList posts={ data.posts } title={ `all (${data.posts.length}) posts >>` }/> }
+            { data && <PostList posts={ data.posts } title={ data.posts.length === 0 ? "no posts yet..." : `all (${data.posts.length}) posts >>` }/> }
         </div>
     );
 }
