@@ -122,8 +122,11 @@ html {
 
 .home .post-list .post-preview .post-content {
   display: flex;
+  width: 850px;
+  flex-direction: column;
   justify-content: center;
   align-items: baseline;
+  word-break: break-all;
 }
 
 .home .post-list .post-preview .post-content p {
@@ -131,7 +134,9 @@ html {
 }
 
 .home .post-list .post-preview .timestamp {
-  color: #434349
+  width: 170px;
+  color: #434349;
+  align-self: first baseline;
 }
 
 .bouncing-dots {
@@ -198,6 +203,11 @@ html {
   justify-content: space-between;
   width: 100%;
   padding: 30px;
+}
+
+.post-container .post-header .creator-details {
+  word-break: break-all;
+  margin-right: 5px;
 }
 
 .post .post-header h2 {
@@ -355,9 +365,15 @@ html {
   font-size: 19px;
 }
 
+.comment-content {
+  width: 850px;
+  word-break: break-all;
+}
+
 .comment .comment-message {
   font-size: 18px;
   margin: 10px 0 10px 5px;
+  text-wrap: wrap;
 }
 
 .comment .comment-details {

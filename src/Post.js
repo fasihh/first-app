@@ -40,8 +40,8 @@ const Post = ({ post }) => {
             <div className="post-container">
                 <div className="post-header">
                     <div className="creator-details">
-                        <h2>{ post.title.length > 50 ? `${post.title.slice(0, 50)}...` : post.title }</h2>
-                        <p>by { post.creator.length > 50 ? `${post.creator.slice(0, 50)}...` : post.creator }</p>
+                        <h2>{ post.title }</h2>
+                        <p>by { post.creator }</p>
                     </div>
                     <div className="time-and-options">
                         <p className="timestamp">{ isUpdated ? "edited -" : "" } { isUpdated ? getDate(post.timestamps.updatedAt) : getDate(post.timestamps.createdAt) }</p>

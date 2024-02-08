@@ -10,8 +10,8 @@ const PostList = ({ posts, title }) => {
                     <div className="post-preview" key={post._id}>
                         <Link to={`/posts/${post._id}`}> 
                             <div className="post-content">
-                                <h2>{ post.title.length > 15 ? `${post.title.slice(0, 15)}...` : post.title }</h2>
-                                <p>by { post.creator.length > 20 ? `${post.creator.slice(0, 20)}...` : post.creator }</p>
+                                <h2>{ post.title }</h2>
+                                <p>by { post.creator }</p>
                             </div>
                             <p className="timestamp">{ getDate(post.timestamps.createdAt) }</p>   
                         </Link>

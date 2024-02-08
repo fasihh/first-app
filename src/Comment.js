@@ -37,7 +37,7 @@ const Comment = ({ comment }) => {
                 <img src={ defaultLogo } alt="" />
                 <div className="comment-content">
                     <div className="comment-creator">by { comment.creator }</div>
-                    <div className="comment-message">{ comment.content }</div>
+                    <p className="comment-message">{ comment.content }</p>
                 </div>
             </div>
             
