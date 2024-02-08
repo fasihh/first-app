@@ -1,6 +1,7 @@
 import { useHistory } from "react-router-dom";
 import getDate from "./getDate";
 import setNull from "./setNull";
+import defaultLogo from "./logo192.png"
 
 const Comment = ({ comment }) => {
     const history = useHistory();
@@ -33,7 +34,7 @@ const Comment = ({ comment }) => {
     return ( 
         <div className="comment">
             <div className="user">
-                {/* <img src="" alt="No image" /> */}
+                <img src={ defaultLogo } alt="" />
                 <div className="comment-content">
                     <div className="comment-creator">by { comment.creator }</div>
                     <div className="comment-message">{ comment.content }</div>
