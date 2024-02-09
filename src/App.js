@@ -6,11 +6,12 @@ import PostDetails from './PostDetails';
 import CreatePost from './CreatePost';
 import NotFound from './NotFound';
 import EditHandler from './EditHandler';
+import SignUp from './SignUp';
 
 function App() {
-  const HandleCreate = () => {
+  const HandleNoUser = ({ location }) => {
     const history = useHistory();
-    history.push('/signin');
+    history.push(location);
   }
 
   return (
@@ -25,6 +26,10 @@ function App() {
               <Navbar />
               <SignIn />
             </Route>
+            {/* <Route exact path="/signup">
+              <Navbar />
+              { localStorage.getItem('token')  ? <HandleNoUser location={'/'}/> : <SignUp /> }
+            </Route> */}
             <Route exact path="/posts/:postId">
               <Navbar />
               <PostDetails />
@@ -35,7 +40,8 @@ function App() {
             </Route>
             <Route exact path="/create">
               <Navbar />
-              { !localStorage.getItem('token')  ? <HandleCreate /> : <CreatePost /> }
+              { localStorage.getItem('token') && <CreatePost /> }
+              { !localStorage.getItem('token') && <HandleNoUser location={'/signin'}/> }
             </Route>
             <Route path="*">
               <NotFound />

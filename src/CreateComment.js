@@ -42,7 +42,7 @@ const CreateComment = ({ postId }) => {
     return ( 
         <div className="create-comment">
             
-            <form>
+            <form onSubmit={ handleCreate }>
                 <input
                     value={ content }
                     type="text"

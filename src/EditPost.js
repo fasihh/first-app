@@ -43,7 +43,7 @@ const EditPost = ({ post }) => {
     return (
         <div className="create-post">
             <h2>edit post</h2>
-            <form>
+            <form onSubmit={ handleEdit }>
                 <div className="create-input">
                     <label>title { failed && !title.length && <div className="error-message">* field required</div>}</label>
                     <input

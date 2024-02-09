@@ -34,7 +34,6 @@ const Post = ({ post }) => {
     }
 
     const isUpdated = getDate(post.timestamps.createdAt) !== getDate(post.timestamps.updatedAt);
-    console.log(getDate(post.timestamps.createdAt), getDate(post.timestamps.updatedAt));
     return ( 
         <article className="post">
             <div className="post-container">

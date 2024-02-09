@@ -40,7 +40,7 @@ const SignIn = () => {
         <div className="signin-form">
             <h2>sign in</h2>
             { failed && <div className="error-message">incorrect username or password</div> }
-            <form>
+            <form onSubmit={ handleSubmit }>
                 <div className="form-input">
                     <label>email { failed && email.length === 0 && <div className="error-message">* missing field</div> }</label>
                     <input 

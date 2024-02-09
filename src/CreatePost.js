@@ -44,7 +44,7 @@ const CreatePost = () => {
     return ( 
         <div className="create-post">
             <h2>create post</h2>
-            <form>
+            <form onSubmit={ handleCreate }>
                 <div className="create-input">
                     <label>title { failed && !title.length && <div className="error-message">* field required</div>}</label>
                     <input
