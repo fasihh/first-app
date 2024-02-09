@@ -6,7 +6,7 @@ import PostDetails from './PostDetails';
 import CreatePost from './CreatePost';
 import NotFound from './NotFound';
 import EditHandler from './EditHandler';
-import SignUp from './SignUp';
+// import SignUp from './SignUp';
 
 function App() {
   const HandleNoUser = ({ location }) => {
